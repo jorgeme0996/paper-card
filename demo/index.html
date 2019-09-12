@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="module">
+        import '../paper-card.js'
+    </script>
+    <title>Paper Card</title>
+</head>
+<body>
+    <paper-card
+        id="card"
+        img="https://sula.hn/wp-content/uploads/2017/03/productos-sula_0069_agua-sula.png"
+        title="Hola"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, quo accusantium eos incidunt nulla eius. Laborum exercitationem neque, repellat est reiciendis, quae corporis necessitatibus in autem quis modi vitae iste."
+    ></paper-card>
+</body>
+<script>
+    const card = document.getElementById('card');
+    card.buttons = [
+        {
+            text: 'Hola',
+            detail: 'hola'
+        },
+        {
+            text: 'Adios',
+            detail: 'adios'
+        }
+    ]
+</script>
+</html>
