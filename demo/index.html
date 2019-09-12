@@ -18,6 +18,12 @@
     ></paper-card>
 </body>
 <script>
+    document.addEventListener('card-clicked', (e)=>{
+        console.log(e);
+    })
+    document.addEventListener('btn-clicked', (e)=>{
+        console.log(e);
+    })
     const card = document.getElementById('card');
     card.buttons = [
         {

@@ -56,12 +56,22 @@ class PaperCard extends LitElement {
                     <p>${this.description}</p>
                     ${this.buttons ? html`
                         ${this.buttons.map(button=>html`
-                            <paper-button>${button.text}</paper-button>
+                            <paper-button event="${button.detail}" @click="${this.btnClicked}">${button.text}</paper-button>
                         `)}
                     `: ''}
                 </div>
             </div>
         `;
+    }
+
+    btnClicked(e){
+        const eventDetail = e.currentTarget.getAttribute('event');
+        let event = new CustomEvent('btn-clicked', {
+          detail: eventDetail,
+          bubbles: true,
+          composed: true 
+        });
+        this.dispatchEvent(event);
     }
 }
 
